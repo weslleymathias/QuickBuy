@@ -1,16 +1,33 @@
-import { Component } from "@angular/core"
+import { Component, OnInit } from "@angular/core"
+import { Produto } from "../modelo/produto";
+import { ProdutoServico } from "../servicos/produto/produto.servico";
 
 @Component({
   selector: "app-produto",
-  template: "<html><body>{{ obterNome() }}</body></html>"
+  templateUrl: "./produto.component.html",
+  styleUrls: ["./produto.component.css"]
 })
-export class ProdutoComponent {// Nome das classes começando com maiúsculo por conta da convenção PascalCase
+export class ProdutoComponent implements OnInit {// Nome das classes começando com maiúsculo por conta da convenção PascalCase
 
-  /* camelCase para variáveis, atributos e nomes das funções */
-  public nome: string;
-  public liberadoParaVenda: boolean;
+  public produto: Produto;
 
-  public obterNome(): string {
-    return "Samsung";
+  constructor(private produtoServico: ProdutoServico) {
+
+  }
+
+  ngOnInit(): void {
+    this.produto = new Produto();
+  }
+
+  public cadastrar() {
+   /* this.produtoServico.cadastrar(this.produto)
+      .subscribe(
+        produtoJson => {
+          console.log(produtoJson);
+        },
+        e => {
+          console.log(e.error);
+        }
+      );*/
   }
 }
