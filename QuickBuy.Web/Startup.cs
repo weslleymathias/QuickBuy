@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,7 @@ namespace QuickBuy.Web
         {
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             var connectionString = Configuration.GetConnectionString("QuickBuyDB");
             services.AddDbContext<QuickBuyContexto>(option => option.UseLazyLoadingProxies().UseMySql(connectionString, m => m.MigrationsAssembly("QuickBuy.Repositorio")));
