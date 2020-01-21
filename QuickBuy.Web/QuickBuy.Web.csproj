@@ -45,8 +45,10 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\arquivos\galaxy_s9__202012111949.png" />
+    <Content Remove="wwwroot\arquivos\galaxy_s9__202012115935.png" />
     <Content Remove="wwwroot\arquivos\weslley.png" />
     <Content Remove="wwwroot\arquivos\weslley2_202012110856.png" />
+    <Content Remove="wwwroot\arquivos\weslley_202012114544.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,6 +60,9 @@
     <None Remove="ClientApp\src\app\fetch-data\fetch-data.component.ts" />
     <None Remove="ClientApp\src\app\modelo\produto.ts" />
     <None Remove="ClientApp\src\app\modelo\usuario.ts" />
+    <None Remove="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.css" />
+    <None Remove="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.html" />
+    <None Remove="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.ts" />
     <None Remove="ClientApp\src\app\produto\produto.component.ts" />
     <None Remove="ClientApp\src\app\servicos\produto\produto.servico.ts" />
     <None Remove="ClientApp\src\app\servicos\usuario\usuario.servico.ts" />
@@ -73,6 +78,13 @@
     <TypeScriptCompile Include="ClientApp\src\app\autorizacao\guarda.rotas.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\modelo\produto.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\modelo\usuario.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\produto\pesquisa\pesquisa.produto.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\produto\produto.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servicos\produto\produto.servico.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servicos\usuario\usuario.servico.ts" />
